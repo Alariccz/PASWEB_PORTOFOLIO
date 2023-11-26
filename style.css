@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+*{
+    scroll-behavior: smooth;
+}
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+   
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+     
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 30px;
+    
+}
+
+/*main-content*/
+.main-content{
+    
+    position: relative;
+    color: rgb(228, 213, 213);
+    height: 650px;
+    margin: 0em;   
+}
+/*layout*/
+.header{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    position: fixed;
+    background-color:#fff ;
+    padding: 1em 2em;
+    width: 96%;
+    z-index: 100;
+    top: 0;
+    
+}
+.option{
+    float: right;
+}
+/*control bar*/
+.control{
+    display: flex;
+    
+}
+    /*nav-bar*/
+.nav-bar{
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    
+}
+.nav-bar .nav-items{
+    padding-left: 1em;
+    
+}
+    /*option bar*/
+.option{
+    
+    display: flex;
+    align-items: center;
+}
+.sign{
+    margin-left: 1.5em;
+    display: flex;
+}
+.sign-items{
+    padding: 0 1em;
+}
+.sign-items+ .sign-items{
+    
+    border-left: solid 1px;
+}
+/*Header effect*/
+.nav-items,.sign-items{
+    text-decoration: none;
+}
+.nav-items::after,.sign-items::after{
+    content: " ";
+    display: block;
+    height: 3px;
+    background-color: #cc8325;
+    margin-top: 2px;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+.nav-items:hover::after,.sign-items:hover::after{
+     transform: scale(1);
+}
+/*language selection*/
+select{
+    background: none;
+    border: none;
+    color: inherit;
+}
+select:hover{
+    cursor: pointer;
+}
+option{
+    font-weight: bold;
+}
+/*reference element*/
+
+/*footer*/
+footer{
+    position: relative;
+    bottom: -50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.sponsor div img{
+    width: 100px;
+    margin: 0 1em;
+    opacity: 0.5;
+}
+.sponsor{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    
+}
+/*main content*/
+
+.player{
+    min-width: 450px;
+    min-height: 400px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Your existing styles */
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        justify-content: center;
+        padding: 0.5em;
+    }
+
+    .nav-bar .nav-items {
+        padding: 0.5em;
+    }
+
+    .option {
+        display: none;
+    }
+
+    /* Adjustments for smaller screens */
+    .header {
+        padding: 0.5em 1em;
+    }
+
+    .nav-items::after,
+    .sign-items::after {
+        width: 80px;
+    }
+
+    .sign-items {
+        margin-left: 0.5em;
+    }
+
+    .button-set {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .btn-radio {
+        margin: 0 0.5em;
+    }
+    
+    .team-position {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        }
+    
+    .position-btn {
+        width: 45%; /* Adjust as needed to fit two items in a row */
+        margin: 1em 0;
+        }
+    
+    .position-btn img {
+        width: 100%; /* Make images fill their container */
+        }
+    
+
+    .position-img {
+        width: 50%; /* Adjust the width as needed */
+        height: auto;
+    }
+
+    .position-number {
+        font-size: 1.2em;
+    }
+
+    .position-name {
+        font-size: 1em;
+    }
+
+
+    .team-position .sub-position {
+        flex-direction: column;
+    }
+
+    .position-btn {
+        margin-bottom: 1em;
+    }
+
+    .visual-text,
+    .visual-image,
+    .visual-statics {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .visual-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .shortcut-items {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio-title,
+    .items-title,
+    .items-position,
+    .items-date,
+    .items-country,
+    .items-date,
+    .items-country,
+    .items-date {
+        margin-bottom: 0.5em;
+    }
+    
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sponsor {
+        margin-bottom: 1em;
+        width: 45%; /* Adjust as needed to fit two items in a row */
+        margin: 1em 0;
+    }
+
+    .sponsor-items img {
+        height: auto;
+        width: 50%;
+        size: 50%;
+    }
+
+    .contact {
+        order: 5; /* Change the order to 1 to move it below sponsor */
+        margin-top: 5em;
+    }
+
+    .contact-items {
+        font-size: 1.5em;
+        margin: 0.5em;
+    }
+}
+
+
+/* Additional adjustments for even smaller screens */
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 0.5em;
+    }
+
+    .nav-bar .nav-items {
+        padding: 0.3em;
+    }
+
+    .info-zoom {
+        width: 80%;
+        margin: auto;
+    }
+
+    .info-general,
+    .info-title {
+        padding: 1em;
+    }
+
+    .legend-name,
+    .legend-birth,
+    .nation,
+    .general-text,
+    .statics,
+    .appearances,
+    .goals {
+        margin-bottom: 1em;
+    }
+
+    .legend-name,
+    .legend-birth,
+    .nation,
+    .general-text,
+    .statics,
+    .appearances,
+    .goals {
+        text-align: center;
+    }
+
+    .visual-message,
+    .match,
+    .wins,
+    .trophies,
+    .bio-title,
+    .items-title,
+    .items-position,
+    .items-date,
+    .items-country,
+    .items-date,
+    .items-country,
+    .items-date {
+        font-size: 0.9em;
+    }
+
+}
